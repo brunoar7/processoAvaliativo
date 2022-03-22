@@ -1,0 +1,15 @@
+br/mil/fab/ccarj/eavaliacaobq/eprocessoavaliativoapi/domain/repository/ModeloAvaliativoRepository.class
+br/mil/fab/ccarj/eavaliacaobq/eprocessoavaliativoapi/EProcessoAvaliativoApiApplication.class
+br/mil/fab/ccarj/eavaliacaobq/eprocessoavaliativoapi/api/controller/DisciplinaController.class
+br/mil/fab/ccarj/eavaliacaobq/eprocessoavaliativoapi/ServletInitializer.class
+br/mil/fab/ccarj/eavaliacaobq/eprocessoavaliativoapi/domain/dto/ModeloAvaliativoDto.class
+br/mil/fab/ccarj/eavaliacaobq/eprocessoavaliativoapi/domain/dto/DisciplinaDto.class
+br/mil/fab/ccarj/eavaliacaobq/eprocessoavaliativoapi/api/controller/ProcessoAvaliativoController.class
+br/mil/fab/ccarj/eavaliacaobq/eprocessoavaliativoapi/domain/service/ModeloAvaliativoService.class
+br/mil/fab/ccarj/eavaliacaobq/eprocessoavaliativoapi/domain/exception/EntidadeNaoEncontradaException.class
+br/mil/fab/ccarj/eavaliacaobq/eprocessoavaliativoapi/core/config/SwaggerConfig.class
+br/mil/fab/ccarj/eavaliacaobq/eprocessoavaliativoapi/domain/service/DisciplinaService.class
+br/mil/fab/ccarj/eavaliacaobq/eprocessoavaliativoapi/domain/repository/DisciplinaRepository.class
+br/mil/fab/ccarj/eavaliacaobq/eprocessoavaliativoapi/api/controller/ModeloAvaliativoController.class
+br/mil/fab/ccarj/eavaliacaobq/eprocessoavaliativoapi/domain/model/Disciplina.class
+br/mil/fab/ccarj/eavaliacaobq/eprocessoavaliativoapi/domain/model/ModeloAvaliativo.class
