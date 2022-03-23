@@ -9,7 +9,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 
 @Entity
-@Table( name = "T_Disciplina", schema="public")
+@Table( name = "T_DISCIPLINA", schema="public")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter

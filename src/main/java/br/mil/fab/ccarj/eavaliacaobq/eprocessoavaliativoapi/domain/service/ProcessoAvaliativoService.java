@@ -1,6 +1,7 @@
 package br.mil.fab.ccarj.eavaliacaobq.eprocessoavaliativoapi.domain.service;
-//
-//public class ProcessoAvaliativoService {
-//
-//
-//}
+
+import br.mil.fab.ccarj.eavaliacaobq.eprocessoavaliativoapi.domain.model.ProcessoAvaliativo;
+
+public interface ProcessoAvaliativoService extends BaseService<ProcessoAvaliativo> {
+
+}

@@ -21,15 +21,15 @@ public class ProcessoModelo {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(nullable = false, name = "ID_MODELO", referencedColumnName = "ID_MODELO")
+    @JoinColumn(nullable = false, name = "ID_MODELO_AVALIATIVO")
     private ModeloAvaliativo modeloAvaliativo;
 
     @ManyToOne
-    @JoinColumn(nullable = false, name = "ID_PROCESSO_AVALIATIVO", referencedColumnName = "ID_PROCESSO_AVALIATIVO")
+    @JoinColumn(nullable = false, name = "ID_PROCESSO_AVALIATIVO")
     private ProcessoAvaliativo processoAvaliativo;
 
     @ManyToOne
-    @JoinColumn(nullable = false, name = "ID_DISCIPLINA", referencedColumnName = "ID_DISCIPLINA")
+    @JoinColumn(nullable = false, name = "ID_DISCIPLINA")
     private Disciplina disciplina;
 
 

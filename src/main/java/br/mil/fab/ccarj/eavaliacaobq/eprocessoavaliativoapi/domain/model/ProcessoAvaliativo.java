@@ -11,7 +11,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table( name = "T_Processo_Avaliativo", schema="public")
+@Table( name = "T_PROCESSO_AVALIATIVO", schema="public")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -28,8 +28,11 @@ public class ProcessoAvaliativo {
     @Column(name = "DC_PROCESSO_AVALIATIVO")
     private String descricao;
 
-    @JsonIgnore
+
+    @OneToMany(mappedBy = "processoAvaliativo")
+    private List<ProcessoModelo> processoModelo;
+
+
     @OneToMany(mappedBy = "processoAvaliativo")
     private List<ProcessoDiscente> processoDiscente;
-
 }

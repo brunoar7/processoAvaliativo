@@ -8,7 +8,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 
 @Entity
-@Table( name = "T_Modelo_Avaliativo", schema="public")
+@Table( name = "T_MODELO_AVALIATIVO", schema="public")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter

@@ -9,7 +9,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "T_Processo_Discente", schema = "public")
+@Table(name = "T_PROCESSO_DISCENTE", schema = "public")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -18,16 +18,16 @@ public class ProcessoDiscente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID_PROCESSO_DISCSCENTE")
+    @Column(name = "ID_PROCESSO_DISCENTE")
     private Long id;
 
     @ManyToOne
+    @JoinColumn(nullable = false, name = "ID_PROCESSO_AVALIATIVO")
+    private ProcessoAvaliativo processoAvaliativo;
+
+    @ManyToOne
+    @JoinColumn(nullable = false, name = "ID_DISCENTE")
     private Discente discente;
 
-    @ManyToOne
-    private Disciplina disciplina;
-
-    @ManyToOne
-    private List<ProcessoAvaliativo> processoAvaliativo;
 
 }
