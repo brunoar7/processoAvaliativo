@@ -9,7 +9,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-public class ProcessoDiscenteServiceImpl implements  ProcessoDiscenteService {
+public class ProcessoDiscenteServiceImpl implements ProcessoDiscenteService {
 
     private final ProcessoDiscenteRepository repository;
 
@@ -25,18 +25,17 @@ public class ProcessoDiscenteServiceImpl implements  ProcessoDiscenteService {
     @Override
     public ProcessoDiscente findById(Long id) throws NotFoundException {
         return repository.findById(id)
-                .orElseThrow(()-> new ("Pocesso<->Discente não encontrado"));
+                .orElseThrow(() -> new NotFoundException("Processo avaliativo não encontrado"));
     }
 
     @Override
     public Page<ProcessoDiscente> findAll(Pageable pageable) {
         return repository.findAll(pageable);
 
-
     }
 
     @Override
-    public void update(Long id, ProcessoDiscente entity) {
+    public void update(Long id, ProcessoDiscente entity) throws NotFoundException {
         ProcessoDiscente processoDiscente = findById(id);
 
         ModelMapper mapper = new ModelMapper();
@@ -49,7 +48,7 @@ public class ProcessoDiscenteServiceImpl implements  ProcessoDiscenteService {
     }
 
     @Override
-    public void delete(Long id) {
+    public void delete(Long id) throws NotFoundException {
         ProcessoDiscente processoDiscente = findById(id);
         repository.delete(processoDiscente);
     }

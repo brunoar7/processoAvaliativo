@@ -1,7 +1,5 @@
 package br.mil.fab.ccarj.eavaliacaobq.eprocessoavaliativoapi.domain.model;
 
-import br.mil.fab.ccarj.eavaliacaobq.eprocessoavaliativoapi.domain.repository.ProcessoDisciplinaRepository;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

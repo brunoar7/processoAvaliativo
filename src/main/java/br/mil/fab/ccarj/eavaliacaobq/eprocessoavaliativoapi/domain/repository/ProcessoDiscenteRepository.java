@@ -4,4 +4,5 @@ import br.mil.fab.ccarj.eavaliacaobq.eprocessoavaliativoapi.domain.model.Process
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ProcessoDiscenteRepository extends JpaRepository<ProcessoDiscente, Long> {
+
 }

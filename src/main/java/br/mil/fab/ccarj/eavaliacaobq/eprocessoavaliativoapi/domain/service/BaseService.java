@@ -9,5 +9,5 @@ public interface BaseService <E> {
         E findById (Long id) throws NotFoundException;
         Page<E> findAll (Pageable pageable);
         void update (Long id, E entity) throws NotFoundException;
-        void delete (Long id);
+        void delete (Long id) throws NotFoundException;
 }

@@ -8,7 +8,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-public class ProcessoAvaliativoServiceImpl implements  ProcessoAvaliativoService {
+public class ProcessoAvaliativoServiceImpl implements ProcessoAvaliativoService {
 
     private final ProcessoAvaliativoRepository repository;
 
@@ -23,9 +23,10 @@ public class ProcessoAvaliativoServiceImpl implements  ProcessoAvaliativoService
     }
 
     @Override
-    public ProcessoAvaliativo findById(Long id)  {
+    public ProcessoAvaliativo findById(Long id) throws NotFoundException {
         return repository.findById(id)
-                .orElseThrow(() -> new NotFoundException("Processo avaliativo não encontrado"));    }
+                .orElseThrow(() -> new NotFoundException("Processo avaliativo não encontrado"));
+    }
 
     @Override
     public Page<ProcessoAvaliativo> findAll(Pageable pageable) {
@@ -33,8 +34,8 @@ public class ProcessoAvaliativoServiceImpl implements  ProcessoAvaliativoService
     }
 
     @Override
-    public void update(Long id, ProcessoAvaliativo entity)  {
-        ProcessoAvaliativo processoAvaliativo =findById(id);
+    public void update(Long id, ProcessoAvaliativo entity) throws NotFoundException {
+        ProcessoAvaliativo processoAvaliativo = findById(id);
 
         ModelMapper Mapper = new ModelMapper();
 
@@ -43,7 +44,8 @@ public class ProcessoAvaliativoServiceImpl implements  ProcessoAvaliativoService
     }
 
     @Override
-    public void delete(Long id) {
-
+    public void delete(Long id) throws NotFoundException {
+    ProcessoAvaliativo processoAvaliativo = findById(id);
+            repository.delete(processoAvaliativo);
     }
 }
